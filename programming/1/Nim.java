@@ -1,3 +1,7 @@
+/**
+ * Game of Nim by Jenna Lin
+ */
+   
 import java.util.*;
 
 public class Nim
