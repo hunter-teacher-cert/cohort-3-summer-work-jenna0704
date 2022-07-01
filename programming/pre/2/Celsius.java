@@ -1,9 +1,11 @@
 import java.io.*;
 import java.util.*;
 
-public class Celsius{
+public class Celsius
+{
 
-  public static void main(String[] args){
+  public static void main(String[] args)
+  {
 
     double celsius, fahrenheit;
     

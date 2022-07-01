@@ -1,7 +1,8 @@
 import java.io.*;
 import java.util.*;
 
-public class Date{
+public class Date
+{
 
   public static void main(String[] args)
   {
