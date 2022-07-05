@@ -28,68 +28,131 @@ public class Array2DPractice
     char[][] board2 = buildBoard(3, 3, '$');
     copyBoard(board2);
 
-    char[][] board3 = buildBoard(9, 9, '$');
-    explodeSquare(board3, 3, 3);
+    System.out.println("");
+
+    //Check explodeSquare
+    char[][] board3 = buildBoard(10, 9, 'o');
+    explodeSquare(board3, 9, 0);
     printBoard(board3);
+
+    
+    System.out.println("");
+
+    //Check explodeAllChar
+    char[][] board4 = { {'a', 'a', 'a', 'a'}, 
+                        {'a', 'b', 'a', 'a'}, 
+                        {'a', 'a', 'a', 'a'}, 
+                        {'a', 'a', 'a', 'a'}, 
+                        {'a', 'a', 'a', 'a'}, 
+                        {'a', 'a', 'a', 'b'}};
+    explodeAllChar(board4, 'b');
+    printBoard(board4);
 
     
   }
 
-  //buildBoard Example
-  public static char[][] buildBoard(int rows, int cols, char value)
-  {
-    char[][] board = new char[rows][cols];
-    for (int i = 0; i < rows; i++) 
+  
+    //buildBoard Example
+    public static char[][] buildBoard(int rows, int cols, char value)
     {
-      for (int j = 0; j < cols; j++) 
+      char[][] board = new char[rows][cols];
+      for (int i = 0; i < rows; i++) 
       {
-        board[i][j]=value;
-      }
-    }
-    return board;
-  }
-
-//printBoard
-public static void printBoard(char[][] board)
-{
-   for (int row = 0; row < board.length; row++)
-   {
-       for (int col = 0; col < board[0].length; col++)
-       {
-           System.out.print(board[row][col]);
-       }
-
-       System.out.println("");
-   }
-}
-
-
-//setRow
-public static void setRow(char[][] board, int row, char value)
-{
-    for (int c = 0; c < board[0].length; c++)
-    {
-        board[row][c] = value;
-    }
-}
-
-
-//copyBoard
-public static char[][] copyBoard(char[][] original)
-{
-    char[][] duplicateBoard = new char[original.length][original[0].length];
-
-    for (int rows = 0; rows < original.length; rows++)
-    {
-        for (int cols = 0; cols < original[0].length; cols++)
+        for (int j = 0; j < cols; j++) 
         {
-            duplicateBoard[rows][cols] = original[rows][cols];
+          board[i][j]=value;
+        }
+      }
+      return board;
+    }
+
+  
+    //printBoard
+    public static void printBoard(char[][] board)
+    {
+       for (int row = 0; row < board.length; row++)
+       {
+           for (int col = 0; col < board[0].length; col++)
+           {
+               System.out.print(board[row][col]);
+           }
+    
+           System.out.println("");
+       }
+    }
+
+
+    //setRow
+    public static void setRow(char[][] board, int row, char value)
+    {
+        for (int c = 0; c < board[0].length; c++)
+        {
+            board[row][c] = value;
         }
     }
 
-    printBoard(duplicateBoard);
 
-    return duplicateBoard;
+    //copyBoard
+    public static char[][] copyBoard(char[][] original)
+    {
+        char[][] duplicateBoard = new char[original.length][original[0].length];
+    
+        for (int rows = 0; rows < original.length; rows++)
+        {
+            for (int cols = 0; cols < original[0].length; cols++)
+            {
+                duplicateBoard[rows][cols] = original[rows][cols];
+            }
+        }
+    
+        printBoard(duplicateBoard);
+    
+        return duplicateBoard;
+    
+    }
 
-}
+
+    //explodeSquare
+    public static void explodeSquare(char[][] board, int row, int col)
+    {
+       
+        for (int i = Math.max(0, row - 1); i <= Math.min(row + 1, board.length - 1); i++)
+        {
+           for (int j = Math.max(0, col - 1); j <= Math.min(col + 1, board[0].length - 1); j++)
+           {
+                if (!(i == row && j == col))
+                {          
+                    board[i][j] = 'x';
+                }
+           }
+        }
+    }
+
+  
+    //explodeAllChar
+        public static void explodeAllChar(char[][] board, char c)
+        {
+            for (int row = 0; row < board.length; row++)
+            {
+                for (int col = 0; col < board[0].length; col++)
+                {
+                    if (board[row][col] == c)
+                    {
+                        for (int i = Math.max(0, row - 1); i <= Math.min(row + 1, board.length - 1); i++)
+                        {
+                            for (int j = Math.max(0, col - 1); j <= Math.min(col + 1, board[0].length - 1); j++)
+                            {
+                                if (!(i == row && j == col))
+                                {          
+                                    board[i][j] = 'x';
+                                }                 
+                            }
+                        }    
+                    }
+                }
+            }
+        }
+
+
+  
 }

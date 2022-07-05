@@ -152,7 +152,6 @@ public class ArrayPractice
               {
                   maxValue = data[i+1];
               }
-              
           }
 
           System.out.printf("The max value of the array is %d.\n", maxValue);
@@ -190,13 +189,22 @@ public class ArrayPractice
                 tempData [i] = data [i];
             }
 
-           
             for (int i = 0; i < data.length; i++)
             {
                 data[i] = tempData[data.length - i - 1];
             }
   
             System.out.println(Arrays.toString(data));
+
+          /** Jushua Higgins
+          *  for (int i = 0; i < data.length/2; i++)
+              {
+                  temp = data[i];
+                  data[i] = data[data.length - 1 - i];
+                  data[data.length - 1 - i] = temp;
+              }
+          *
+          */  
         }
 }
 
