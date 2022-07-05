@@ -52,11 +52,11 @@ public class Array2DPractice
 //printBoard
 public static void printBoard(char[][] board)
 {
-   for (int rows = 0; rows < board.length; rows++)
+   for (int row = 0; row < board.length; row++)
    {
-       for (int cols = 0; cols < board[0].length; cols++)
+       for (int col = 0; col < board[0].length; col++)
        {
-           System.out.print(board[rows][cols]);
+           System.out.print(board[row][col]);
        }
 
        System.out.println("");
