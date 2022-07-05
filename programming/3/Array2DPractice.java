@@ -11,6 +11,27 @@ public class Array2DPractice
 
   public static void main(String[] args)
   {
+    char[][] board = buildBoard(3, 4, 'a');
+
+    //Check buildBoard and printBoard
+    printBoard(board);
+
+    System.out.println("");
+
+    //Check setRow
+    setRow(board, 1, '#');
+    printBoard(board);
+    
+    System.out.println("");
+
+    //Check copyBoard
+    char[][] board2 = buildBoard(3, 3, '$');
+    copyBoard(board2);
+
+    char[][] board3 = buildBoard(9, 9, '$');
+    explodeSquare(board3, 3, 3);
+    printBoard(board3);
+
     
   }
 
