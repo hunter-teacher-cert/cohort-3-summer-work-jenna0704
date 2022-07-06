@@ -40,7 +40,7 @@ public class Array2DPractice
 
     //Check explodeAllChar
     char[][] board4 = { {'a', 'a', 'a', 'a'}, 
-                        {'a', 'b', 'a', 'a'}, 
+                        {'a', 'b', 'b', 'a'}, 
                         {'a', 'a', 'a', 'a'}, 
                         {'a', 'a', 'b', 'a'}, 
                         {'a', 'a', 'a', 'a'}, 
@@ -152,6 +152,10 @@ public class Array2DPractice
                         {
                             for (int j = Math.max(0, col - 1); j <= Math.min(col + 1, board[0].length - 1); j++)
                             {
+                                if (board[i][j] == c)
+                                {
+                                    continue;
+                                }
                                 if (!(i == row && j == col))
                                 {          
                                     board[i][j] = 'x';
@@ -164,7 +168,6 @@ public class Array2DPractice
         }
 
 
-  
     //downString
     public static void downString(char[][] board, int row, int col, String word)
     {
