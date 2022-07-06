@@ -42,12 +42,22 @@ public class Array2DPractice
     char[][] board4 = { {'a', 'a', 'a', 'a'}, 
                         {'a', 'b', 'a', 'a'}, 
                         {'a', 'a', 'a', 'a'}, 
-                        {'a', 'a', 'a', 'a'}, 
+                        {'a', 'a', 'b', 'a'}, 
                         {'a', 'a', 'a', 'a'}, 
                         {'a', 'a', 'a', 'b'}};
     explodeAllChar(board4, 'b');
     printBoard(board4);
 
+    
+    System.out.println("");
+
+    //Check explodeAllChar
+    String word = "HELLO";
+    String word1 = "WORLD";
+    char[][] board5 = buildBoard(7, 6, 'x');
+    downString(board5, 1, 1, word);
+    downString(board5, 4, 3, word1);
+    printBoard(board5);
     
   }
 
@@ -74,7 +84,7 @@ public class Array2DPractice
        {
            for (int col = 0; col < board[0].length; col++)
            {
-               System.out.print(board[row][col]);
+               System.out.print(board[row][col] + " ");
            }
     
            System.out.println("");
@@ -154,5 +164,15 @@ public class Array2DPractice
         }
 
 
+  
+    //downString
+    public static void downString(char[][] board, int row, int col, String word)
+    {
+        for (int i = row; i < row + Math.min(board.length - row, word.length()); i++)
+        {
+            board[i][col] = word.charAt(i - row);
+        }
+
+    }
   
 }
