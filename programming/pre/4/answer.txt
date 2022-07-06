@@ -1,0 +1,20 @@
+Exercise 1:
+if (x > 0 && x < 10) {
+System.out.println("positive single digit number.");
+}
+
+Exercise 2:
+1. Draw a stack diagram that shows the state of the program the second time zoop is invoked.
+
+
+
+
+
+2. What is the complete output?
+just for
+any not more
+It's breakfast 
+!
+
+Exercise 3:
+Draw a stack diagram that shows the state of the program in Section 5.8 after main invokes nLines with the parameter n == 4, just before the last invocation of nLines returns.
