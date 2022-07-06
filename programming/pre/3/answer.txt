@@ -1,0 +1,22 @@
+1. What is the output of the following program? Be precise about where there are spaces and where there are newlines.
+
+No, I wug.
+You wugga wug.
+I wug.
+
+
+2. Draw a stack diagram that shows the state of the program the first time ping is invoked.
+
+
+
+
+
+3. What happens if you invoke baffle(); at the end of the ping method?
+baffle -> ping -> baffle -> ping (Non-escape)
+No, I wug.
+wug.
+wug.
+wug.
+wug.
+wug.
+...

@@ -4,7 +4,7 @@ import java.util.*;
 /**
  * Conway's Game of Life Team AreWeSentientYet?
  * Jenna Lin
- * collaborators: Mike Randazzo, Adam Prado, Cassara
+ * collaborators: Mike Randazzo, Adam Prado, Aasine Cassara
  */
 
 /**

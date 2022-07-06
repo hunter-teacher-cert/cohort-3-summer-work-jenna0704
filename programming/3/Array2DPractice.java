@@ -3,7 +3,7 @@ import java.io.*;
 
 /**
  * Array2DPractice by Jenna Lin
- * collaborators: First Last, First Last
+ * collaborators: Kiana Herr, Nicole Cojuango, Yanique Sears
  */
 
 public class Array2DPractice
