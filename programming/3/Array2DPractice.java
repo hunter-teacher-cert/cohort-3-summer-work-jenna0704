@@ -168,11 +168,13 @@ public class Array2DPractice
     //downString
     public static void downString(char[][] board, int row, int col, String word)
     {
-        for (int i = row; i < row + Math.min(board.length - row, word.length()); i++)
+        int i = 0;
+        while (i < word.length() && row < board.length)
         {
-            board[i][col] = word.charAt(i - row);
+            board[row][col] = word.charAt(i);
+            row++;
+            i++;
         }
-
     }
   
 }
