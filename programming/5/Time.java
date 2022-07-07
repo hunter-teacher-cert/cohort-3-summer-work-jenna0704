@@ -1,11 +1,13 @@
 import java.io.*;
 import java.util.*;
 
+
 /**
  * Time class by Team LucidThinkeren
  * Jenna Lin
  * collaborators: Ashley Ufret, Yenming Young, Erwin Lara.
  */
+
 
 public class Time 
 {
@@ -56,24 +58,21 @@ public class Time
     */
     public void add(Time other)
     {
-        Time sum = new Time();
-        sum.hours = this.hours + other.hours;
-        sum.minutes = this.minutes + other.minutes;
-        sum.seconds = this.seconds + other.seconds;
+        this.hours += other.hours;
+        this.minutes += other.minutes;
+        this.seconds += other.seconds;
 
-        if (sum.seconds >= 60)
+        if (this.seconds >= 60)
         {
-            sum.seconds -= 60;
-            sum.minutes += 1;
+            this.seconds -= 60;
+            this.minutes += 1;
         }
 
-        if (sum.minutes >= 60)
+        if (this.minutes >= 60)
         {
-            sum.minutes -= 60;
-            sum.hours += 1;
+            this.minutes -= 60;
+            this.hours += 1;
         }
-
-        System.out.printf("%d:%d:%d \n", sum.hours, sum.minutes, sum.seconds);
 
     }
 
@@ -105,6 +104,13 @@ public class Time
        0 if the two instances represent the same time.
 
     */
+    
+    // Convert time to seconds 
+    // public int convertTime (Time other)
+    // {
+    //     return this.hours * 3600 + this.minutes * 60 + this.seconds;
+    // }
+    
     public int compareTo(Time other)
     {
 	    if (this.hours == other.hours && this.minutes == other.minutes && this.seconds == other.seconds)
@@ -112,7 +118,8 @@ public class Time
             return 0;
         }
 
-        else if ((this.hours * 3600 + this.minutes * 60 + this.seconds) > (other.hours * 3600 + other.minutes * 60 + other.seconds) )
+      
+        else if ((this.hours * 3600 + this.minutes * 60 + this.seconds) > (other.hours * 3600 + other.minutes * 60 + other.seconds))
         {
             return 1;
         }
