@@ -80,8 +80,8 @@ public class Rational
     // need not reduce
     public void multiply(Rational r)
     {
-        this._numerator = this._numerator * r._numerator;
-        this._denominator = this._denominator * r._denominator;
+        this._numerator *= r._numerator;
+        this._denominator *= r._denominator;
     }
 
 
@@ -89,8 +89,15 @@ public class Rational
     // same as multiply, except operation is division
     public void divide(Rational r)
     {
-        this._numerator = this._numerator / r._numerator;
-        this._denominator = this._denominator / r._denominator;
+        if (r._numerator != 0)
+        {
+          this._numerator *= r._denominator;
+          this._denominator *= r._numerator;
+        }
+        else
+        {
+          System.out.println("Division by zero occured.");
+        }  
     }
 
 }//end class
