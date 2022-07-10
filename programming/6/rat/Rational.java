@@ -9,11 +9,6 @@
    class Rational
    An instance of this class will represent a rational number (p/q s.t. p,q ints && q!=0),
    and facilitate mathematical operations with another instance of class Rational.
-
-
-   Intermediate level (complete Basic methods plus these methods):
-   - floatValue
-
 */
 
 
@@ -140,10 +135,12 @@ public class Rational
     //reduce
     public void reduce()
     {
-        int n = gcd(this._numerator, this_denominator);
+        int n = gcd(this._numerator, this._denominator);
 
         this._numerator /= n;
         this._denominator /= n;
       
     }
+
+  
 }//end class

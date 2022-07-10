@@ -51,8 +51,11 @@ public class Driver
 
       System.out.println();
     
-      System.out.println(w.gcd(8, 24));
+      System.out.printf("The greatest common divsor of 8 and 24 is %d.\n", w.gcd(8, 24));
 
+      System.out.println();
+      w.reduce();
+      System.out.println("8/12 can be reduced to " + w);
   }
 
 }//end class
