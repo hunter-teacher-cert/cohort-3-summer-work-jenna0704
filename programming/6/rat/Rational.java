@@ -98,4 +98,52 @@ public class Rational
         }  
     }
 
+  
+    // calculates GCD/GCF of numerator and denominator
+    public int gcd()
+    {
+        int i = Math.min(this._numerator, this._denominator);
+
+        while (i > 0)
+        {
+            if (this._numerator % i == 0 && this._denominator % i == 0)
+            {
+                return i;
+            }
+
+            i--;
+        }
+
+        return i;
+    }
+
+
+    //calculates GCD/GCF of two int inputs
+    public int gcd(int n, int d)
+    {
+        int i = Math.min(n, d);
+
+        while (i > 0)
+        {
+            if (this._numerator % i == 0 && this._denominator % i == 0)
+            {
+                return i;
+            }
+
+            i--;
+        }
+
+        return i;
+    }
+
+
+    //reduce
+    public void reduce()
+    {
+        int n = gcd(this._numerator, this_denominator);
+
+        this._numerator /= n;
+        this._denominator /= n;
+      
+    }
 }//end class

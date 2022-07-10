@@ -1,5 +1,7 @@
 /**
- * Game of Nim by Jenna Lin
+ * Game of Nim by Team BossCoders
+ * Jenna Lin
+ * collaborators: First Last, First Last
  */
    
 import java.util.*;

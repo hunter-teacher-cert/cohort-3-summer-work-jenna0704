@@ -1,7 +1,7 @@
 /**
- * ArrayPractice by Jenna Lin
-
-   Contributors: Sarah McCoy, Stay Goldstein,	Rachel Kaufman
+ * ArrayPractice by Team BossCoders
+ * Jenna Lin
+ * Contributors: Sarah McCoy, Stay Goldstein,	Rachel Kaufman
  */
 
 import java.util.*;
@@ -17,31 +17,40 @@ public class ArrayPractice
   public static void main(String[] args)
     {
         //Check 1. buildIncreasingArray
-        buildIncreasingArray(5, 3, 2);
-
+        printArray(buildIncreasingArray(5, 3, 2));
+        System.out.println();
+      
         //Check 2. buildRandomArray
-        buildRandomArray(5, 100);
-
+        printArray(buildRandomArray(5, 100));
+        System.out.println();
+      
         //Check 3. printArray
         printArray(someData);
-
-        //Check 4. arraySum
-        arraySum(someData);
+        System.out.println();
       
+        //Check 4. arraySum
+        System.out.printf("The sum of elements in the array is %d.\n", arraySum(someData));
+        System.out.println();        
+  
         //Check 5.firstOccurence
-        firstOccurence(someData, 4);
-
+        System.out.printf("The first occurence of 4 is at index %d.\n", firstOccurence(someData, 4));
+        System.out.println(); 
+      
         //Check 6.isSorted
         System.out.println("Is the array sorted? " + isSorted(someData));
+        System.out.println();     
 
         //Check 7. findMaxValue
-        findMaxValue(someData2);
+        System.out.printf("The max value of the array is %d.\n", findMaxValue(someData));
+        System.out.println(); 
 
         //Check 8. countOdds
-        countOdds(someData2);
-
+        System.out.printf("There are %d odd numbers in the array.\n", countOdds(someData2));
+        System.out.println(); 
+      
         //Check 9. flip
         flip(someData);
+        printArray(someData);
       
       
     }
@@ -56,9 +65,6 @@ public class ArrayPractice
             data[0] = startValue; //assign startValue to index 0
             data[n] = data[n-1] + step; //find the next element in the array
         }
-      
-        //display the elements of the array
-        System.out.println(Arrays.toString(data));
 
         return data;
     }
@@ -74,21 +80,22 @@ public class ArrayPractice
           {
               data[i] = r.nextInt(maxValue);
           }
-  
-          System.out.println(Arrays.toString(data));
 
           return data;
       }
 
+  
     // 3. printArray
       public static void printArray(int[] data)
       {
-           for (int i = 0; i < data.length; i++)
-           {
-             System.out.print(data[i] + " ");
-           }
+          System.out.print("{" + data[0]);
+        
+          for (int i = 1; i < data.length; i++)
+          {
+            System.out.print(", " + data[i]);
+          }
 
-            System.out.println("");
+          System.out.println("}");
       }
 
 
@@ -101,8 +108,6 @@ public class ArrayPractice
           {
               sum = sum + data[i];
           }
-          
-          System.out.println(sum);
           
           return sum;
       }
@@ -118,8 +123,6 @@ public class ArrayPractice
                 i++;
             }
             
-            System.out.println(i);
-            
             return i;
         }
 
@@ -133,8 +136,7 @@ public class ArrayPractice
               if (data[i] > data[i+1])
               {
                 return false;
-              }
-              
+              }             
           }
     
             return true;
@@ -154,7 +156,6 @@ public class ArrayPractice
               }
           }
 
-          System.out.printf("The max value of the array is %d.\n", maxValue);
           return maxValue;
       }
 
@@ -172,7 +173,6 @@ public class ArrayPractice
                 }
             }
 
-            System.out.printf("There are %d odd numbers.\n", count);
             return count;
         }
 
@@ -193,8 +193,6 @@ public class ArrayPractice
             {
                 data[i] = tempData[data.length - i - 1];
             }
-  
-            System.out.println(Arrays.toString(data));
 
           /** Jushua Higgins
           *  for (int i = 0; i < data.length/2; i++)

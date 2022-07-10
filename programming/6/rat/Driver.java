@@ -45,6 +45,14 @@ public class Driver
       r.divide(t);
       System.out.println(r);
 
+      System.out.println();
+    
+      System.out.println(w.gcd());
+
+      System.out.println();
+    
+      System.out.println(w.gcd(8, 24));
+
   }
 
 }//end class

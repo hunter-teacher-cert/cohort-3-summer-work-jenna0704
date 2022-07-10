@@ -2,7 +2,8 @@ import java.util.*;
 import java.io.*;
 
 /**
- * Array2DPractice by Jenna Lin
+ * Array2DPractice by Team LucidThinkeren
+ * Jenna Lin
  * collaborators: Kiana Herr, Nicole Cojuango, Yanique Sears
  */
 
@@ -16,19 +17,19 @@ public class Array2DPractice
     //Check buildBoard and printBoard
     printBoard(board);
 
-    System.out.println("");
+    System.out.println();
 
     //Check setRow
     setRow(board, 1, '#');
     printBoard(board);
     
-    System.out.println("");
+    System.out.println();
 
     //Check copyBoard
     char[][] board2 = buildBoard(3, 3, '$');
-    copyBoard(board2);
+    printBoard(copyBoard(board2));
 
-    System.out.println("");
+    System.out.println();
 
     //Check explodeSquare
     char[][] board3 = buildBoard(10, 9, 'o');
@@ -36,7 +37,7 @@ public class Array2DPractice
     printBoard(board3);
 
     
-    System.out.println("");
+    System.out.println();
 
     //Check explodeAllChar
     char[][] board4 = { {'a', 'a', 'a', 'a'}, 
@@ -114,8 +115,6 @@ public class Array2DPractice
                 duplicateBoard[rows][cols] = original[rows][cols];
             }
         }
-    
-        printBoard(duplicateBoard);
     
         return duplicateBoard;
     

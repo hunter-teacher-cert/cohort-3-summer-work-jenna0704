@@ -28,7 +28,7 @@ public class Cgol
     static char dead = '-';
     static char alive = 'X';
 
-    public static void main( String[] args )
+    public static void main(String[] args)
     {
         char[][] board;
         board = createNewBoard(5,5);
@@ -62,6 +62,7 @@ public class Cgol
                 board[i][j] = dead;
             }
         }
+      
         return board;
     }
 
@@ -82,7 +83,7 @@ public class Cgol
 
 
     //set cell (r,c) to val
-    public static void setCell( char[][] board, int r, int c, char val )
+    public static void setCell(char[][] board, int r, int c, char val)
     {
         board[r][c] = val;
     }
@@ -102,7 +103,8 @@ public class Cgol
                     numOfNeighbours++;                   
                 }
             }
-        }       
+        }      
+      
             return numOfNeighbours;
     }
 
