@@ -125,7 +125,7 @@ public class SuperArray
     public void remove(int index)
     {
         // shift items down to remove the item at index
-        for (int i = index; i < numberElements; i++)
+        for (int i = index; i < numberElements - 1; i++)
         {
             this.data[i] = this.data[i + 1];
         }
