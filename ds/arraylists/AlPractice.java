@@ -128,32 +128,32 @@ public class AlPractice
     - The dataList is modified such that all occurances of valueToRemove are removed.
     */
 
-    public static void removeValue(ArrayList<Integer> dataList, int valueToRemove)
-    {
-        for (int i = 0; i < dataList.size(); i++)
-        {
-            dataList.remove(new Integer(valueToRemove));
-        }
-
-    }
-
     // public static void removeValue(ArrayList<Integer> dataList, int valueToRemove)
     // {
-    //     int i = 0;
-
-    //     while (i < dataList.size())
+    //     for (int i = 0; i < dataList.size(); i++)
     //     {
-    //         if (dataList.get(i) == valueToRemove)
-    //         {
-    //             dataList.remove(i);
-    //         }
-    //         else
-    //         {
-    //           i++;
-    //         }
+    //         dataList.remove(new Integer(valueToRemove));
     //     }
 
     // }
+
+    public static void removeValue(ArrayList<Integer> dataList, int valueToRemove)
+    {
+        int i = 0;
+
+        while (i < dataList.size())
+        {
+            if (dataList.get(i) == valueToRemove)
+            {
+                dataList.remove(i);
+            }
+            else
+            {
+              i++;
+            }
+        }
+
+    }
 
 
     /**
