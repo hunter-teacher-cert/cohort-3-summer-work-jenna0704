@@ -56,19 +56,22 @@ public class LinkedList
     */
     public String get(int index)
     {
-        String returnString = "";
+        String returnString = "Index Out of Bound Error.";
         
         Node walker = head;
 
         int i = 0;
 
-        while(i != index )
+        while(i <= index && walker != null)
         {
+            if(i == index)
+            {
+                returnString = walker.getData();
+            }
+            
             walker = walker.getNext();
             i++;
         }
-
-        returnString += walker.getData();
 
         return returnString;
     }
@@ -131,18 +134,27 @@ public class LinkedList
     */
     public void add(int index, String value)
     {
+
         Node walker = head;
 
-        for(int i = 0; i < index - 1; i++)
+        if (index == 0)
         {
-            walker = walker.getNext();
+            add(value);
         }
-
-        // Allocate the Node and put in the value, then make next of newNode as walker.getNext();
-        Node newNode = new Node(value, walker.getNext());
         
-        walker.setNext(newNode);
-   
+        else
+        {
+            for(int i = 0; i < index - 1; i++)
+            {
+                walker = walker.getNext();
+            }
+
+            // Allocate the Node and put in the value, then make next of newNode as walker.getNext();
+            Node newNode = new Node(value, walker.getNext());
+            
+            walker.setNext(newNode);
+        }
+          
     }
 
 
@@ -162,14 +174,20 @@ public class LinkedList
 
         Node walker = head;
         
-        while (walker.getData() != value)
+        while (walker != null)
         {
+            if(walker.getData() == value)
+            {
+                return index;
+            }
+            
             walker = walker.getNext();
 
             index += 1;
+
         }
         
-        return index;
+        return -1; // return -1 if value is not found.
     }
 
 
@@ -212,6 +230,11 @@ public class LinkedList
     {
         Node walker = head; 
 
+        if(index == 0)
+        {
+            head = walker.getNext();
+        }
+        
         for(int i = 0; i < index - 1; i++)
         {
             walker = walker.getNext();
