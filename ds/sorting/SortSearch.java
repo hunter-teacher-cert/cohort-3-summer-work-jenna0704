@@ -134,7 +134,7 @@ public class SortSearch
     public int binarySearch(int value)
     {
         int low = 0;
-        int high = data.size() - 1;
+        int high = data.size();
 
         while(low <= high)
         {
