@@ -10,35 +10,35 @@ public class SortSearch
     private ArrayList<Integer> data;  // to store the data
     
     private Random r; 
-
+  
     public SortSearch()
     {
-	    data = new ArrayList<Integer>();
-	    r = new Random();
-         
-	    for (int i = 0; i < 15; i++)
+        data = new ArrayList<Integer>();
+  	    r = new Random();
+           
+  	    for (int i = 0; i < 15; i++)
         {
-	        data.add(r.nextInt(20));
-	    }	
+  	        data.add(r.nextInt(20));
+  	    }	
     }
 
   
     public SortSearch(int size)
     {
-	    data = new ArrayList<Integer>();
-	    r = new Random();
-        
-	    for (int i = 0; i < size; i++)
+        data = new ArrayList<Integer>();
+  	    r = new Random();
+          
+  	    for (int i = 0; i < size; i++)
         {
-	        data.add(r.nextInt(20));
-	    }	
+  	        data.add(r.nextInt(20));
+  	    }	
     }
 
   
     /* Convenience function to get data out of the ArrayList from the driver */
     public int get(int index)
     {
-	    return this.data.get(index);
+	      return this.data.get(index);
     }
     
 
@@ -59,17 +59,17 @@ public class SortSearch
     */
     public int findSmallestIndex(int start)
     {
-	    int smallIndex = start;
-        
-        for(int i = start; i < data.size(); i++)
-        {
-            if(get(i) < get(smallIndex))
-            {
-                smallIndex = i;
-            }
-        }
-        
-	    return smallIndex;
+  	    int smallIndex = start;
+          
+          for(int i = start; i < data.size(); i++)
+          {
+              if(get(i) < get(smallIndex))
+              {
+                  smallIndex = i;
+              }
+          }
+          
+  	    return smallIndex;
     }
 
 
@@ -122,7 +122,7 @@ public class SortSearch
             }
         }
 	
-	    return -1;
+	      return -1;
     }
     
 
@@ -142,15 +142,20 @@ public class SortSearch
 
             if(get(middle) == value)
             {
+                if(get(middle) == get(middle - 1))
+                {
+                    middle -= 1;
+                }
+              
                 return middle;
             }
 
-            if(get(middle) < value)
+            else if(get(middle) < value)
             {
                 low = middle + 1;
             }
             
-            if(get(middle) > value)
+            else if(get(middle) > value)
             {
                 high = middle - 1;
             }       
@@ -174,6 +179,11 @@ public class SortSearch
             // target found
             if (get(middle) == value) 
             {
+                if(get(middle) == get(middle - 1))
+                {
+                    middle -= 1;
+                }
+              
                 return middle;
             }
     
@@ -199,13 +209,13 @@ public class SortSearch
 	
     public String toString()
     {
-	    return "" + data;
+	      return "" + data;
     }
 
 
     public void builtinSort()
     {
-	    Collections.sort(data);	
+	      Collections.sort(data);	
     }
     
 

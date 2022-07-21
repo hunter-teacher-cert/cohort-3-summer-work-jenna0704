@@ -1,0 +1,47 @@
+Amanda Lee, Jenna Lin, Nicole Cojuangco
+Team 7 :: <TBD>
+Methods - Summer 2022
+
+CODE TRACING in the classroom
+======================================
+
+PROS:
+---------------------------------------
+a) helps understand concept more thoroughly (makes abstract concepts more   accessible)  
+b) visually understanding of what's happening in the computer
+c) helps improve debugging technique because of more thorough grasp on concept
+d) can help identify logic errors when compiling/not producing expected output
+e) track variable values as they update
+f) the nature of the process buys time for slow-to-process students to catch up
+g) excellent Check For Understanding (by teacher and by self), in the moment as well as reviewing work later 
+
+CONS:
+---------------------------------------
+a) not a con but a CAVEAT...for more complex topics, diagramming (reading and generatin) as a skill should be introduced intentionally and/or w scaffolds (e.g. explanation of legends/keys before being asked to read a map)beforehand; more students can contriubte to the space if that's done first
+
+BEST FOR:
+---------------------------------------
+a) abstraction
+(for loops, recursion, practicing functions)
+
+
+LEAST-SUITED TO:
+---------------------------------------
+very intro topics (e.g. short algorithms)
+(you probably don't want to incorporate this until conditionals, etc.)
+
+PROVEN PRO-TIPS:
+---------------------------------------
+*refer to visual (to be uploaded after class)
+ 
+
+
+RESOURCES:
+---------------------------------------
+< any links, reading titles, names, etc. you have find useful >
+
+
+OTHER:
+---------------------------------------
+*trees, trace tables, and flowcharts seem to be preferred by students from some teachers' experience
+     --> *flowchart hook idea...Big Bang Theory, Sheldon's "how to make friends as            demo...then they make their own for another topic of interest
