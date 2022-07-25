@@ -23,8 +23,5 @@ public class SortSearchReferenceDriver
       	elapsed = System.currentTimeMillis() - start;
       	System.out.println("Size: " + size + " Time: " + elapsed);
       			
-
-	      
-
     }
 }

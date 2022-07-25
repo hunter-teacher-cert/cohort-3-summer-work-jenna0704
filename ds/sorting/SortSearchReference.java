@@ -205,18 +205,21 @@ public class SortSearchReference
        You can use this method to test your merge method.
 
     */
-    public ArrayList<Integer> buildIncreasingList(int size){
-	ArrayList<Integer>  newlist = new ArrayList<Integer>();
-	Random r = new Random();
-	int nextval = r.nextInt(20)+1;
-	for (int i=0;i<size;i++){
-	    newlist.add(nextval);
-	    nextval = nextval + r.nextInt(20);
-	}
+    public ArrayList<Integer> buildIncreasingList(int size)
+    {
+      	ArrayList <Integer> newlist = new ArrayList<Integer>();
+      	Random r = new Random();
+      	int nextval = r.nextInt(20) + 1;
+      	for (int i = 0; i < size; i++)
+        {
+      	    newlist.add(nextval);
+      	    nextval = nextval + r.nextInt(20);
+	      }
 
-	return newlist;
-	}
+	      return newlist;
+	  }
 
+  
     /**
        this routine should create and return a new ArrayList of
        integers and fill it by merging list1 and list2 into the new
@@ -239,7 +242,7 @@ public class SortSearchReference
 
 	// code for merge
 	
-	return new ArrayList<Integer>(); // replace this line
+	  return new ArrayList<Integer>(); // replace this line
     }
 
     
