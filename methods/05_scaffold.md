@@ -1,29 +1,39 @@
 # Scaffolding Techniques
 #### by Team DifferentiationIsHardButCanPayoffBigtime
-Roster: First Last, First Last, First Last
+Roster: Jihae Park, Jenna Lin, Usman Ahmed, Rachel Kaufman, A Cassara
 
 
-### Technique: ___
+### Technique: starter code 
 
 #### Well-suited to...
-* situation
-* thing
-* other thing
+* unit project that includes multiple concepts
+* writing a single method along with other pre-poupulated methods in a class
+* 
 
 #### Example
-* name of a coding activity (like BinarySearch, For loops, etc)
-* name of a not-necessarily coding activity
-* code snippet to illustrate
-* etc
+* skeleton with the names of the method in order of complexity/logic
+* comments with subgoals
+* driver file with testing conditions
 
 * * *
 
-USAGE of this template: replicate the section above as many times as necessary for each type of scaffolding/differentiation technique your team can think of. Delete these usage instructions once read.
+### Technique: code diagram
+
+#### Well-suited to...
+* loops/iteration, conditionals
+* swapping values
+* etc. - more complex tasks
+
+
+#### Example
+* linked list 
+* recursion
+
 
 * * *
 
 ### Related resources
-* [a link (this is the visible text)](https://xkcd.com)
+* [a link (this is the visible text)]([https://xkcd.com](https://pythontutor.com/java.html#mode=edit))
 * for when you just want to show the link (gh will still make it clickable): https://xkcd.com
 * a story
 * a book

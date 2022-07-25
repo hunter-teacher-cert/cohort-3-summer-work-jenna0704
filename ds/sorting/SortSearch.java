@@ -172,12 +172,12 @@ public class SortSearch
     */
     public int binarySearchRecursive(int value, int lowIndex, int highIndex)
     {
-        while (lowIndex <= highIndex)
+        while(lowIndex <= highIndex)
         {
             int middle = (lowIndex + highIndex) / 2; //init tracker variable for middle position
 
             // target found
-            if (get(middle) == value) 
+            if(get(middle) == value) 
             {
                 if(get(middle) == get(middle - 1))
                 {
@@ -188,14 +188,14 @@ public class SortSearch
             }
     
             // if value at the middle index is greater than the target value
-            else if (get(middle) > value)
+            else if(get(middle) > value)
             {
                 //discard all elements to the right of get(middle), including get(middle). Now the new high value would be middle - 1. 
                 return binarySearchRecursive(value, lowIndex, middle - 1);
             }
     
             // if value at the middle index is less than the target value
-            else if (get(middle) < value) 
+            else if(get(middle) < value) 
             {
                 //discard all elements to the left of get(middle), including get(middle). Now the new low value would be mPos + 1. 
                 return binarySearchRecursive(value, middle + 1, highIndex);
@@ -217,7 +217,85 @@ public class SortSearch
     {
 	      Collections.sort(data);	
     }
-    
+
+  
+    /* Merge Sort Stuff after here */
+    /**
+       Builds and returns an ArrayList that's already in increasing order.
+       You can use this method to test your merge method.
+    */
+    public ArrayList<Integer> buildIncreasingList(int size)
+    {
+      	ArrayList <Integer> newlist = new ArrayList<Integer>();
+      	Random r = new Random();
+      	int nextval = r.nextInt(20) + 1;
+      	for (int i = 0; i < size; i++)
+        {
+      	    newlist.add(nextval);
+      	    nextval = nextval + r.nextInt(20);
+	      }
+
+	      return newlist;
+	  }
+
+    /**
+       this routine should create and return a new ArrayList of
+       integers and fill it by merging list1 and list2 into the new
+       list.
+
+       list1 and list2 are already sorted in increasing order.
+
+       Example:
+       If list1 contains [1,5,17,25]
+       and list2 contains [3,6,10,30,40,50]
+
+       The new list will contain:
+       [1, 3, 5, 6, 10, 17, 25, 30, 40, 50]     
+    */
+       
+    public ArrayList<Integer> merge(ArrayList<Integer> list1, ArrayList<Integer> list2)
+    {
+      	// create a new ArrayList merged to store values from list1 and list2
+      	ArrayList <Integer> merged = new ArrayList <Integer>();
+
+        // use i, j, and k to keep track of where we are at in list1, list2, and merged list
+        int i = 0;
+        int j = 0;
+        int k = 0;
+
+        while(i < list1.size() && j < list2.size())
+        {
+            if(list1.get(i) < list2.get(j))
+            {
+                merged.add(list1.get(i));
+                k++;
+                i++;
+            }
+            else 
+            {
+                merged.add(list2.get(j));
+                k++;
+                j++;
+            }
+        }
+
+        while(i < list1.size())
+        {
+            merged.add(list1.get(i));
+            k++;
+            i++;
+        }
+
+        while(j < list2.size())
+        {
+            merged.add(list2.get(j));
+            k++;
+            j++;
+        }
+        
+      	return merged;
+    }
 
     
+     
 }

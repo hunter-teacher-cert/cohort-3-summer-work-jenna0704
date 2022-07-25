@@ -51,5 +51,15 @@ public class SortSearchDriver
         System.out.print("Binary Search Recursive: ");
 	      System.out.printf("1 is at index %d. \n", ss.binarySearchRecursive(1, 0, 19));
 
+      
+        System.out.println("\nMerging 2 Array Lists:");
+        ArrayList <Integer> list1 = ss.buildIncreasingList(5);
+        System.out.println("List 1: " + list1);
+
+        ArrayList <Integer> list2 = ss.buildIncreasingList(10);
+        System.out.println("List 2: " + list2);
+
+        ArrayList <Integer> merged = ss.merge(list1, list2);
+        System.out.println("Merged list: " + merged);
     }
 }

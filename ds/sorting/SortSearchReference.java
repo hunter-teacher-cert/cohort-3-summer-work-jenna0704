@@ -1,9 +1,15 @@
 import java.io.*;
 import java.util.*;
 
+/* 
+  Search Project:
+  1. Complete the linear search (BASIC)
+  2. Complete the binary search (Intermediate)
+  3. Complete the recursive version of binary search (Advanced)
+*/
 
-public class SortSearchReference{
-
+public class SortSearchReference
+{
     /* Sort project starts here */
     
     /* Instance Variables */
@@ -12,31 +18,33 @@ public class SortSearchReference{
     private Random r; 
 
     
-    public SortSearchReference(){
-	data = new ArrayList<Integer>();
-	r = new Random();
-	for (int i=0;i<15;i++){
-	    data.add(r.nextInt(20));
-	}
-	
+    public SortSearchReference()
+    {
+      	data = new ArrayList<Integer>();
+      	r = new Random();
+      	for(int i = 0; i < 15; i++)
+        {
+      	    data.add(r.nextInt(20));
+      	}
     }
     
-    public SortSearchReference(int size){
-	data = new ArrayList<Integer>();
-	r = new Random();
-	for (int i=0;i<size;i++){
-	    data.add(r.nextInt(20));
-	}
-	
+    public SortSearchReference(int size)
+    {
+      	data = new ArrayList<Integer>();
+      	r = new Random();
+      	for(int i = 0; i < size; i++)
+        {
+      	    data.add(r.nextInt(20));
+      	}      	
     }
 
     /* Convenience function to get data out of the ArrayList from the driver */
-    public int get(int index){
-	return this.data.get(index);
+    public int get(int index)
+    {
+	      return this.data.get(index);
     }
-    
 
-
+  
     /*
       return the index of the smallest data idem from index start to the end
       of the ArrayList. If there are multiple of the smallest value,
@@ -190,5 +198,50 @@ public class SortSearchReference{
     }
     
 
+    /* Merge Sort Stuff after here */
+    /**
+       Builds and returns an ArrayList that's already in increasing order.
+
+       You can use this method to test your merge method.
+
+    */
+    public ArrayList<Integer> buildIncreasingList(int size){
+	ArrayList<Integer>  newlist = new ArrayList<Integer>();
+	Random r = new Random();
+	int nextval = r.nextInt(20)+1;
+	for (int i=0;i<size;i++){
+	    newlist.add(nextval);
+	    nextval = nextval + r.nextInt(20);
+	}
+
+	return newlist;
+	}
+
+    /**
+       this routine should create and return a new ArrayList of
+       integers and fill it by merging list1 and list2 into the new
+       list.
+
+       list1 and list2 are already sorted in increasing order.
+
+       Example:
+       If list1 contains [1,5,17,25]
+       and list2 contains [3,6,10,30,40,50]
+
+       The new list will contain:
+       [1, 3, 5, 6, 10, 17, 25, 30, 40, 50]
+
+       
+    */
+       
+    public ArrayList<Integer> merge(ArrayList<Integer> list1,
+				    ArrayList<Integer> list2){
+
+	// code for merge
+	
+	return new ArrayList<Integer>(); // replace this line
+    }
+
+    
     
 }
